@@ -23,13 +23,18 @@ class NavigationResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-menu';
 
-    protected static bool $showTimestamps = true;
+    protected static ?string $slug = 'nav';
 
-    private static ?string $workNavigationLabel = null;
+    protected static ?int $navigationSort = 222;
 
-    private static ?string $workPluralLabel = null;
+    protected static bool $showTimestamps = false;
 
-    private static ?string $workLabel = null;
+    protected static ?string $navigationLabel = 'Навигация';
+
+    protected static ?string $pluralModelLabel = 'Навигация';
+
+    protected static ?string $label = 'Навигационного меню';
+
 
     public static function disableTimestamps(bool $condition = true): void
     {
@@ -87,35 +92,6 @@ class NavigationResource extends Resource
             ->columns(12);
     }
 
-    public static function navigationLabel(?string $string): void
-    {
-        static::$workNavigationLabel = $string;
-    }
-
-    public static function pluralLabel(?string $string): void
-    {
-        static::$workPluralLabel = $string;
-    }
-
-    public static function label(?string $string): void
-    {
-        static::$workLabel = $string;
-    }
-
-    protected static function getNavigationLabel(): string
-    {
-        return static::$workNavigationLabel ?? parent::getNavigationLabel();
-    }
-
-    public static function getLabel(): ?string
-    {
-        return static::$workLabel ?? parent::getLabel();
-    }
-
-    public static function getPluralLabel(): ?string
-    {
-        return static::$workPluralLabel ?? parent::getPluralLabel();
-    }
 
     public static function table(Table $table): Table
     {
@@ -127,14 +103,6 @@ class NavigationResource extends Resource
                 TextColumn::make('handle')
                     ->label(__('filament-navigation::filament-navigation.attributes.handle'))
                     ->searchable(),
-                TextColumn::make('created_at')
-                    ->label(__('filament-navigation::filament-navigation.attributes.created_at'))
-                    ->dateTime()
-                    ->sortable(),
-                TextColumn::make('updated_at')
-                    ->label(__('filament-navigation::filament-navigation.attributes.updated_at'))
-                    ->dateTime()
-                    ->sortable(),
             ])
             ->filters([
 

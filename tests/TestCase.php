@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanChandler\FilamentNavigation\Tests;
+namespace Kaluchii\FilamentNavigation\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -13,7 +13,7 @@ use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Illuminate\Support\Str;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use RyanChandler\FilamentNavigation\FilamentNavigationServiceProvider;
+use Kaluchii\FilamentNavigation\FilamentNavigationServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -24,7 +24,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'RyanChandler\\FilamentNavigation\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Kaluchii\\FilamentNavigation\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace RyanChandler\FilamentNavigation;
+namespace Kaluchii\FilamentNavigation;
 
 use Filament\PluginServiceProvider;
-use RyanChandler\FilamentNavigation\Filament\Resources\NavigationResource;
+use Kaluchii\FilamentNavigation\Filament\Resources\NavigationResource;
 use Spatie\LaravelPackageTools\Package;
 
 class FilamentNavigationServiceProvider extends PluginServiceProvider

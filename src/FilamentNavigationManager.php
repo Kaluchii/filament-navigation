@@ -1,13 +1,13 @@
 <?php
 
-namespace RyanChandler\FilamentNavigation;
+namespace Kaluchii\FilamentNavigation;
 
 use Closure;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
-use RyanChandler\FilamentNavigation\Models\Navigation;
+use Kaluchii\FilamentNavigation\Models\Navigation;
 
 class FilamentNavigationManager
 {

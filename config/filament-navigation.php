@@ -1,5 +1,5 @@
 <?php
-// config for RyanChandler/FilamentNavigation
+// config for Kaluchii/FilamentNavigation
 return [
 
 ];

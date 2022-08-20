@@ -1,14 +1,14 @@
 <?php
 
-namespace RyanChandler\FilamentNavigation\Facades;
+namespace Kaluchii\FilamentNavigation\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use RyanChandler\FilamentNavigation\FilamentNavigationManager;
+use Kaluchii\FilamentNavigation\FilamentNavigationManager;
 
 /**
- * @method static \RyanChandler\FilamentNavigation\FilamentNavigationManager addItemType(string $name, array | \Closure $fields = [])
+ * @method static \Kaluchii\FilamentNavigation\FilamentNavigationManager addItemType(string $name, array | \Closure $fields = [])
  * @method static array getItemTypes()
- * @method static \RyanChandler\FilamentNavigation\Models\Navigation|null get(string $handle)
+ * @method static \Kaluchii\FilamentNavigation\Models\Navigation|null get(string $handle)
  */
 class FilamentNavigation extends Facade
 {

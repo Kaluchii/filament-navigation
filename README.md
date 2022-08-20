@@ -75,10 +75,10 @@ The recursive structure makes it really simple to render nested menus / dropdown
 
 ### Retrieving a navigation object
 
-To retrieve a navigation object, provide the handle to the `RyanChandler\FilamentNavigation\Facades\FilamentNavigation::get()` method.
+To retrieve a navigation object, provide the handle to the `Kaluchii\FilamentNavigation\Facades\FilamentNavigation::get()` method.
 
 ```php
-use RyanChandler\FilamentNavigation\Facades\FilamentNavigation;
+use Kaluchii\FilamentNavigation\Facades\FilamentNavigation;
 
 $menu = FilamentNavigation::get('main-menu');
 ```
@@ -92,7 +92,7 @@ It's possible to extend the plugin with custom item types. Custom item types hav
 This API allows you to deeply integrate navigation menus with your application's own entities and models.
 
 ```php
-use RyanChandler\FilamentNavigation\Facades\FilamentNavigation;
+use Kaluchii\FilamentNavigation\Facades\FilamentNavigation;
 
 FilamentNavigation::addItemType('Post link', [
     Select::make('post_id')
@@ -110,7 +110,7 @@ All custom fields for the item type can be found inside of the `data` property o
 This plugin also provides a custom Filament field that can be used to search and select a navigation menu inside other forms and resources.
 
 ```php
-use RyanChandler\FilamentNavigation\Filament\Fields\NavigationSelect;
+use Kaluchii\FilamentNavigation\Filament\Fields\NavigationSelect;
 
 ->schema([
     NavigationSelect::make('navigation_id'),

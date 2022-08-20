@@ -38,13 +38,13 @@
     },
     "autoload": {
         "psr-4": {
-            "RyanChandler\\FilamentNavigation\\": "src",
-            "RyanChandler\\FilamentNavigation\\Database\\Factories\\": "database/factories"
+            "Kaluchii\\FilamentNavigation\\": "src",
+            "Kaluchii\\FilamentNavigation\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RyanChandler\\FilamentNavigation\\Tests\\": "tests"
+            "Kaluchii\\FilamentNavigation\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -58,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RyanChandler\\FilamentNavigation\\FilamentNavigationServiceProvider"
+                "Kaluchii\\FilamentNavigation\\FilamentNavigationServiceProvider"
             ],
             "aliases": {
-                "FilamentNavigation": "RyanChandler\\FilamentNavigation\\Facades\\FilamentNavigation"
+                "FilamentNavigation": "Kaluchii\\FilamentNavigation\\Facades\\FilamentNavigation"
             }
         }
     },

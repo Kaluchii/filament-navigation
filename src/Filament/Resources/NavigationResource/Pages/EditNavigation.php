@@ -1,10 +1,10 @@
 <?php
 
-namespace RyanChandler\FilamentNavigation\Filament\Resources\NavigationResource\Pages;
+namespace Kaluchii\FilamentNavigation\Filament\Resources\NavigationResource\Pages;
 
 use Filament\Resources\Pages\EditRecord;
-use RyanChandler\FilamentNavigation\Filament\Resources\NavigationResource;
-use RyanChandler\FilamentNavigation\Filament\Resources\NavigationResource\Pages\Concerns\HandlesNavigationBuilder;
+use Kaluchii\FilamentNavigation\Filament\Resources\NavigationResource;
+use Kaluchii\FilamentNavigation\Filament\Resources\NavigationResource\Pages\Concerns\HandlesNavigationBuilder;
 
 class EditNavigation extends EditRecord
 {

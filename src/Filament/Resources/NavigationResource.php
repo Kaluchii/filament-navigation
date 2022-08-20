@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanChandler\FilamentNavigation\Filament\Resources;
+namespace Kaluchii\FilamentNavigation\Filament\Resources;
 
 use Closure;
 use Filament\Forms\Components\Card;
@@ -15,7 +15,7 @@ use Filament\Resources\Table;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
-use RyanChandler\FilamentNavigation\Models\Navigation;
+use Kaluchii\FilamentNavigation\Models\Navigation;
 
 class NavigationResource extends Resource
 {

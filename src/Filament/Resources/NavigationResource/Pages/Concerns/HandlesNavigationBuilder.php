@@ -155,7 +155,7 @@ trait HandlesNavigationBuilder
                         ->label(__('filament-navigation::filament-navigation.items-modal.label'))
                         ->required(),
                     Select::make('type')
-                        ->label(__('filament-navigation::filament-navigation.items-modal.label'))
+                        ->label(__('filament-navigation::filament-navigation.items-modal.type'))
                         ->options(function () {
                             $types = FilamentNavigation::getItemTypes();
 

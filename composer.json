@@ -1,17 +1,17 @@
 {
-    "name": "ryangjchandler/filament-navigation",
+    "name": "kaluchii/filament-navigation",
     "description": "Build structured navigation menus in Filament.",
     "keywords": [
-        "ryangjchandler",
+        "kaluchii",
         "laravel",
         "filament-navigation"
     ],
-    "homepage": "https://github.com/ryangjchandler/filament-navigation",
+    "homepage": "https://github.com/kaluchii/filament-navigation",
     "license": "MIT",
     "authors": [
         {
             "name": "Ryan Chandler",
-            "email": "support@ryangjchandler.co.uk",
+            "email": "support@kaluchii.co.uk",
             "role": "Developer"
         }
     ],

@@ -1,9 +1,9 @@
 # Build structured navigation menus in Filament.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ryangjchandler/filament-navigation.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/filament-navigation)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/filament-navigation/run-tests?label=tests)](https://github.com/ryangjchandler/filament-navigation/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/filament-navigation/Check%20&%20fix%20styling?label=code%20style)](https://github.com/ryangjchandler/filament-navigation/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/ryangjchandler/filament-navigation.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/filament-navigation)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/kaluchii/filament-navigation.svg?style=flat-square)](https://packagist.org/packages/kaluchii/filament-navigation)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/kaluchii/filament-navigation/run-tests?label=tests)](https://github.com/kaluchii/filament-navigation/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/kaluchii/filament-navigation/Check%20&%20fix%20styling?label=code%20style)](https://github.com/kaluchii/filament-navigation/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/kaluchii/filament-navigation.svg?style=flat-square)](https://packagist.org/packages/kaluchii/filament-navigation)
 
 This plugin for Filament provides a `Navigation` resource that allows to build structural navigation menus with ease.
 
@@ -157,7 +157,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Ryan Chandler](https://github.com/ryangjchandler)
+- [Ryan Chandler](https://github.com/kaluchii)
 - [All Contributors](../../contributors)
 
 ## License

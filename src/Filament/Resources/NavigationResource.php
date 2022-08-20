@@ -49,8 +49,8 @@ class NavigationResource extends Resource
                     TextInput::make('name')
                         ->label(__('filament-navigation::filament-navigation.attributes.name'))
                         ->reactive()
-                        ->afterStateUpdated(function (?string $state, Closure $set) {
-                            if (! $state) {
+                        ->afterStateUpdated(function (?string $state, Closure $set, $context) {
+                            if (! $state || $context === 'edit') {
                                 return;
                             }
 

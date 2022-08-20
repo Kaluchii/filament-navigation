@@ -8,4 +8,9 @@ use Kaluchii\FilamentNavigation\Filament\Resources\NavigationResource;
 class ListNavigations extends ListRecords
 {
     protected static string $resource = NavigationResource::class;
+
+    protected function hasCreateAction(): bool
+    {
+        return false;
+    }
 }

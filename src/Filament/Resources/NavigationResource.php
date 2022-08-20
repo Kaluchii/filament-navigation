@@ -71,6 +71,7 @@ class NavigationResource extends Resource
                         TextInput::make('handle')
                             ->label(__('filament-navigation::filament-navigation.attributes.handle'))
                             ->required()
+                            ->disabled(fn ($state) => $state )
                             ->unique(column: 'handle', ignoreRecord: true),
                         View::make('filament-navigation::card-divider')
                             ->visible(static::$showTimestamps),
@@ -106,6 +107,11 @@ class NavigationResource extends Resource
             ])
             ->filters([
 
+            ])
+            ->actions([
+                \Filament\Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
             ]);
     }
 

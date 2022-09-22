@@ -11,7 +11,7 @@ class ListNavigations extends ListRecords
 
     protected function hasCreateAction(): bool
     {
-        return false; // TODO: Сделать редактируемым из конфига
+        return config('filament-navigation.can-create') ?? false;
     }
 
     protected function isTablePaginationEnabled(): bool

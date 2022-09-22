@@ -21,25 +21,6 @@ class NavigationResource extends Resource
 {
     protected static ?string $model = Navigation::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-menu'; // TODO: Сделать редактируемым из конфига
-
-    protected static ?string $slug = 'nav'; // TODO: Сделать редактируемым из конфига
-
-    protected static ?int $navigationSort = 222; // TODO: Сделать редактируемым из конфига
-
-    protected static bool $showTimestamps = false; // TODO: Сделать редактируемым из конфига
-
-    protected static ?string $navigationLabel = 'Навигация'; // TODO: Сделать редактируемым из конфига
-
-    protected static ?string $pluralModelLabel = 'Навигация'; // TODO: Сделать редактируемым из конфига
-
-    protected static ?string $label = 'Навигационного меню'; // TODO: Сделать редактируемым из конфига
-
-
-    public static function disableTimestamps(bool $condition = true): void
-    {
-        static::$showTimestamps = ! $condition;
-    }
 
     public static function form(Form $form): Form
     {
@@ -74,14 +55,14 @@ class NavigationResource extends Resource
                             ->disabled(fn ($state) => $state )
                             ->unique(column: 'handle', ignoreRecord: true),
                         View::make('filament-navigation::card-divider')
-                            ->visible(static::$showTimestamps),
+                            ->visible(static::canShowTimestamps()),
                         Placeholder::make('created_at')
                             ->label(__('filament-navigation::filament-navigation.attributes.created_at'))
-                            ->visible(static::$showTimestamps)
+                            ->visible(static::canShowTimestamps())
                             ->content(fn (?Navigation $record) => $record ? $record->created_at->translatedFormat(config('tables.date_time_format')) : new HtmlString('&mdash;')),
                         Placeholder::make('updated_at')
                             ->label(__('filament-navigation::filament-navigation.attributes.updated_at'))
-                            ->visible(static::$showTimestamps)
+                            ->visible(static::canShowTimestamps())
                             ->content(fn (?Navigation $record) => $record ? $record->updated_at->translatedFormat(config('tables.date_time_format')) : new HtmlString('&mdash;')),
                     ]),
                 ])
@@ -104,6 +85,16 @@ class NavigationResource extends Resource
                 TextColumn::make('handle')
                     ->label(__('filament-navigation::filament-navigation.attributes.handle'))
                     ->searchable(isGlobal: false),
+                TextColumn::make('created_at')
+                    ->label(__('filament-navigation::filament-navigation.attributes.created_at'))
+                    ->dateTime()
+                    ->sortable()
+                    ->hidden(static::canShowTimestamps()),
+                TextColumn::make('updated_at')
+                    ->label(__('filament-navigation::filament-navigation.attributes.updated_at'))
+                    ->dateTime()
+                    ->sortable()
+                    ->hidden(static::canShowTimestamps()),
             ])
             ->filters([
 
@@ -122,5 +113,40 @@ class NavigationResource extends Resource
             'create' => NavigationResource\Pages\CreateNavigation::route('/create'),
             'edit' => NavigationResource\Pages\EditNavigation::route('/{record}'),
         ];
+    }
+
+    protected static function getNavigationSort(): ?int
+    {
+        return config('filament-navigation.navigation-sort') ?? null;
+    }
+
+    protected static function getNavigationLabel(): string
+    {
+        return config('filament-navigation.navigation-label') ?? parent::getNavigationLabel();
+    }
+
+    protected static function getNavigationIcon(): string
+    {
+        return config('filament-navigation.navigation-icon') ?? 'heroicon-o-menu';
+    }
+
+    public static function getSlug(): string
+    {
+        return config('filament-navigation.slug') ?? parent::getSlug();
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return config('filament-navigation.plural-model-label') ?? parent::getPluralModelLabel();
+    }
+
+    public static function getModelLabel(): string
+    {
+        return config('filament-navigation.label') ?? parent::getModelLabel();
+    }
+
+    public static function canShowTimestamps(): string
+    {
+        return config('filament-navigation.show-timestamps') ?? false;
     }
 }

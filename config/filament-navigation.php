@@ -3,6 +3,7 @@
 return [
     'can-create' => false,
     'navigation-sort' => 1,
+    'navigation-group' => null,
     'navigation-label' => 'Навигация',
     'navigation-icon' => 'heroicon-o-menu',
     'slug' => 'nav',

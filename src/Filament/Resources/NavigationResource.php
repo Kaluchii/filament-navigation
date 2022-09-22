@@ -89,12 +89,12 @@ class NavigationResource extends Resource
                     ->label(__('filament-navigation::filament-navigation.attributes.created_at'))
                     ->dateTime()
                     ->sortable()
-                    ->hidden(static::canShowTimestamps()),
+                    ->visible(static::canShowTimestamps()),
                 TextColumn::make('updated_at')
                     ->label(__('filament-navigation::filament-navigation.attributes.updated_at'))
                     ->dateTime()
                     ->sortable()
-                    ->hidden(static::canShowTimestamps()),
+                    ->visible(static::canShowTimestamps()),
             ])
             ->filters([
 
@@ -118,6 +118,11 @@ class NavigationResource extends Resource
     protected static function getNavigationSort(): ?int
     {
         return config('filament-navigation.navigation-sort') ?? null;
+    }
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return config('filament-navigation.navigation-group') ?? null;
     }
 
     protected static function getNavigationLabel(): string

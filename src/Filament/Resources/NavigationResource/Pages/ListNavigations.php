@@ -11,6 +11,11 @@ class ListNavigations extends ListRecords
 
     protected function hasCreateAction(): bool
     {
+        return false; // TODO: Сделать редактируемым из конфига
+    }
+
+    protected function isTablePaginationEnabled(): bool
+    {
         return false;
     }
 }

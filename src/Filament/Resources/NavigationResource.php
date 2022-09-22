@@ -21,19 +21,19 @@ class NavigationResource extends Resource
 {
     protected static ?string $model = Navigation::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-menu';
+    protected static ?string $navigationIcon = 'heroicon-o-menu'; // TODO: Сделать редактируемым из конфига
 
-    protected static ?string $slug = 'nav';
+    protected static ?string $slug = 'nav'; // TODO: Сделать редактируемым из конфига
 
-    protected static ?int $navigationSort = 222;
+    protected static ?int $navigationSort = 222; // TODO: Сделать редактируемым из конфига
 
-    protected static bool $showTimestamps = false;
+    protected static bool $showTimestamps = false; // TODO: Сделать редактируемым из конфига
 
-    protected static ?string $navigationLabel = 'Навигация';
+    protected static ?string $navigationLabel = 'Навигация'; // TODO: Сделать редактируемым из конфига
 
-    protected static ?string $pluralModelLabel = 'Навигация';
+    protected static ?string $pluralModelLabel = 'Навигация'; // TODO: Сделать редактируемым из конфига
 
-    protected static ?string $label = 'Навигационного меню';
+    protected static ?string $label = 'Навигационного меню'; // TODO: Сделать редактируемым из конфига
 
 
     public static function disableTimestamps(bool $condition = true): void
@@ -100,10 +100,10 @@ class NavigationResource extends Resource
             ->columns([
                 TextColumn::make('name')
                     ->label(__('filament-navigation::filament-navigation.attributes.name'))
-                    ->searchable(),
+                    ->searchable(isGlobal: false),
                 TextColumn::make('handle')
                     ->label(__('filament-navigation::filament-navigation.attributes.handle'))
-                    ->searchable(),
+                    ->searchable(isGlobal: false),
             ])
             ->filters([
 
